@@ -1,0 +1,900 @@
+@charset "UTF-8";
+/* CSS Document */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*START CSS HERE*/
+html {
+	scroll-behavior: smooth;
+}
+
+#home
+{
+	height: 100%;
+	width: 160px;
+	padding-top: 30px;
+	padding-left: 50px;
+}
+
+.topnav
+{
+	float: right;
+	padding-right: 50px;
+	padding-top: 60px;
+}
+
+.topnav > a
+{
+	padding-left: 45px;
+	text-decoration: none;
+	font-family: "Slackey", sans-serif;
+	font-weight: 400;
+	color: #e8b235;
+	font-size: 1.5vw;
+}
+
+.homebox
+{
+	border-radius: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 25px;
+	height: 600px;
+}
+
+#homePic
+{
+	width: 100%;
+	height: 100%;
+	border-radius: 25px;
+	object-fit: cover;
+}
+
+#welcome
+{
+	font-family: "Slackey", sans-serif;
+	font-weight: 400;
+	font-size: 3.5vw;
+	color: white;
+	position: absolute;
+	bottom: 20%;
+	left: 60px;
+}
+
+#statement
+{
+	font-family: "Urbanist", sans-serif;
+	font-weight: 500;
+	font-size: 1vw;
+	color: white;
+	position: absolute;
+	left: 60px;
+	bottom: 40px;
+	width: 40%;
+	line-height: 1.6;
+	letter-spacing: 0.5px;
+}
+
+/*Button css*/
+#myBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: #5d7422; 
+  color: white; 
+  cursor: pointer; 
+  padding: 12px; 
+  border-radius: 10px; 
+	font-family: "Slackey", sans-serif;
+  font-size: 1.2vw; 
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/*end button css*/
+
+#services {
+	padding-top: 45px;
+	padding-left: 30px;
+	font-family: "Slackey", sans-serif;
+	font-weight: 400;
+	font-size: 3vw;
+	color: #e8b235;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+	height: 530px;
+  position: relative;
+	margin-top: 45px;
+  margin-left: 30px;
+	margin-right: 30px;
+	background: #e8b235;
+	border-radius: 25px;
+}
+
+.backgroundbox {
+	background: #53aeb7;
+	border-radius: 25px;
+	max-width: 100%;
+}
+
+.slideshowpic {
+	width: 45%;
+	height: 100%;
+	margin-top: 50px;
+	margin-left: 90px;
+	object-fit: contain;
+	border-radius: 20px;
+}
+
+.slidesbox1 {
+	font-family: "Urbanist", sans-serif;
+	font-weight: 200;
+	font-size: 1vw;
+	float: right;
+	width: 35%;
+	position: relative;
+	right: 80px;
+	background: white;
+	padding: 20px;
+	border-radius: 20px;
+	margin-top: 110px;
+	line-height: 1.6;
+	letter-spacing: 1px;
+}
+
+.slidesbox2 {
+	font-family: "Urbanist", sans-serif;
+	font-weight: 200;
+	font-size: 1vw;
+	float: right;
+	width: 35%;
+	position: relative;
+	right: 80px;
+	background: white;
+	padding: 20px;
+	border-radius: 20px;
+	line-height: 1.6;
+	bottom: 245px;
+	letter-spacing: 1px;
+}
+
+.slidesbox3 {
+	font-family: "Urbanist", sans-serif;
+	font-weight: 200;
+	font-size: 1vw;
+	position: absolute;
+	float: right;
+	width: 35%;
+	right: 80px;
+	background: white;
+	padding: 20px;
+	border-radius: 20px;
+	line-height: 1.6;
+	bottom: 50px;
+	letter-spacing: 1px;
+}
+
+.slidesBold {
+	font-weight: 300;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #5d7422;
+}
+
+#boating {
+font-family: "Urbanist", sans-serif;
+	font-weight: 900;
+	font-size: 3vw;
+  color: #5d7422;
+  width: 100%;
+	position: absolute;
+	text-align: right;
+	top: 50px;
+	right: 450px;
+}
+
+#historical {
+font-family: "Urbanist", sans-serif;
+	font-weight: 900;
+	font-size: 3vw;
+  color: #5d7422;
+  width: 100%;
+	position: absolute;
+	text-align: right;
+	top: 50px;
+	right: 415px;
+}
+
+#food {
+font-family: "Urbanist", sans-serif;
+	font-weight: 900;
+	font-size: 3vw;
+  color: #5d7422;
+  width: 100%;
+	position: absolute;
+	text-align: right;
+	top: 50px;
+	right: 225px;
+}
+
+/* The dots/bullets/indicators */
+.dotContainer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.dotWrapper {
+	margin: 0 auto;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 auto;
+	background-color: #e8b235;
+  border-radius: 50%;
+	display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #BA8A28;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*SERVICES CONTAINER ENDS HERE*/
+
+#about {
+	padding-top: 60px;
+	padding-left: 30px;
+	font-family: "Slackey", sans-serif;
+	font-weight: 400;
+	font-size: 3vw;
+	color: #e8b235;
+	float: right;
+	margin-right: 30px;
+}
+
+.aboutbox
+{
+	border-radius: 15px;
+	margin-top: 175px;
+	padding-left: 30px;
+	height: 650px;
+}
+
+#aboutpic {
+	width: 54%;
+	height: 90%;
+	border-radius: 25px;
+	object-fit: cover;
+}
+
+#abouttext {
+	font-family: "Urbanist", sans-serif;
+	font-weight: 400;
+	font-size: 1.7vw;
+	line-height: 1.6;
+	width: 40%;
+	float: right;
+	padding-right: 30px;
+	color: #5d7422;
+}
+
+#staff {
+	padding-top: 40px;
+	padding-left: 30px;
+	font-family: "Slackey", sans-serif;
+	font-weight: 400;
+	font-size: 3vw;
+	color: #e8b235;
+}
+
+#stafftext {
+	font-family: "Urbanist", sans-serif;
+	font-weight: 400;
+	font-size: 1.6vw;
+	line-height: 1.6;
+	width: 45%;
+	float: left;
+	padding-left: 30px;
+	padding-right: 40px;
+	color: #5d7422;
+}
+
+.staffbox {
+	border-radius: 15px;
+	padding-right: 30px;
+	padding-top: 60px;
+	padding-bottom: 30px;
+	display: flex;
+	flex-direction: row;
+}
+
+#staffpic {
+	width: 50%;
+	height: 100%;
+	border-radius: 25px 25px 25px 25px;
+	margin-left: 50px;
+	object-fit: contain;
+}
+
+footer {
+	background: #53aeb7;
+}
+
+#contact {
+	padding-left: 30px;
+	font-family: "Slackey", sans-serif;
+	font-weight: 400;
+	font-size: 3vw;
+	color: #e8b235;
+	margin-top: 50px;
+	margin-right: 250px;
+}
+
+.contactbox {
+	display: flex;
+}
+
+.contactinfo {
+	font-family: "Urbanist", sans-serif;
+	font-weight: 100;
+	font-size: 1vw;
+	letter-spacing: 1.5px;
+	line-height: 1.5;
+	color: white;
+	padding-right: 30px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	width: 80%;
+}
+
+.contactBold {
+	font-weight: 500;
+}
+
+#contactstatement {
+	font-weight: 600;
+}
+
+/*media query for ipad*/
+@media only  screen and (max-width: 1034px) {
+#welcome {
+	bottom: 120px;
+}
+
+#statement {
+	bottom: 50px;
+}
+
+.slideshow-container {
+	height: 450px;
+}
+	
+.slideshowpic {
+	margin-top: 95px;
+	margin-left: 50px;
+}
+
+.slidesbox1 {
+	margin-top: 95px;
+}
+
+.slidesbox2 {
+	bottom: 190px;
+}
+
+.slidesbox3 {
+	bottom: 70px;
+}	
+	
+#boating {
+	top: 50px;
+	right: 330px;
+}
+
+#historical {
+	top: 50px;
+	right: 305px;
+}
+
+#food {
+	top: 50px;
+	right: 180px;
+}
+}
+
+/*media query for ipad landscape*/
+@media only screen and (max-width: 1400px) {
+	#welcome {
+		top: 60%;
+	}
+	
+	#statement {
+		bottom: 25%;
+	}
+	
+	.slideshowpic {
+		margin-top: 5%;
+	}
+	
+	.slidesbox1 {
+		margin-top: 9.6%;
+	}
+	
+	.slidesbox2 {
+		bottom: 220px;
+	}
+	
+	.slidesbox3 {
+		bottom: 13%;
+	}
+	
+	#boating {
+		top: 11%;
+		right: 32%;
+	}
+	
+	#historical {
+		top: 12%;
+		right: 29.5%;
+	}
+	
+	#food {
+		top: 11%;
+		right: 16.6%;
+	}
+}
+
+/*media query for iphone 15 pro max*/
+@media only screen and (max-width: 430px) {
+	html, body {
+		width: 100%;
+		overflow-x: hidden;
+	}
+	
+	#home {
+		margin-left: 85px;
+	}
+	
+	.topnav {
+		margin-top: -30px;
+		margin-bottom: 20px;
+		margin-right: -5px;
+	}
+	
+	.topnav > a {
+		margin-right: 25px;
+		font-size: 2.5vw;
+		padding: 1px;
+	}
+	
+	.homebox {
+		height: 520px;
+	}
+	
+	#welcome {
+	top: 60%;
+	font-size: 6vw;
+	}
+	
+	#statement {
+	top: 64%;
+	font-size: 2.5vw;
+	width: 70%;
+	}
+	
+	#services {
+		font-size: 6vw;
+		margin-top: 10%;
+	}
+	
+	.slideshow-container {
+		margin-top: 5%;
+		height: 70vh;
+	}
+	
+	.slideshowpic {
+	width: 90%;
+	margin-left: 20px;
+	margin-top: 30px;
+	}
+	
+	.slidesbox1 {
+	margin-top: 22%;
+	margin-right: -30px;
+	width: 65%;
+	font-size: 2.2vw;
+	border-radius: 15px;
+	padding: 15px;
+	}
+	
+	.slidesbox2 {
+	margin-top: 62%;
+	margin-right: -30px;
+	width: 65%;
+	font-size: 2.2vw;
+	border-radius: 15px;
+	padding: 15px;
+	}
+	
+	.slidesbox3 {
+	margin-bottom: -60px;
+	margin-right: -30px;
+	width: 65%;
+	font-size: 2.2vw;
+	border-radius: 15px;
+	padding: 15px;
+	}
+	
+	#boating {
+		left: -218px;
+		top: 45%;
+		font-size: 6vw;
+	}
+	
+	#historical {
+		left: -199px;
+		top: 45%;
+		font-size: 6vw;
+	}
+	
+	#food {
+		font-size: 6vw;
+		left: -90px;
+		top: 45%;
+	}
+	
+	.dotContainer {
+		display: none;
+	}
+	
+	#about {
+		font-size: 6vw;
+		padding:0;
+		margin-top: 10px;
+	}
+	
+	.aboutbox {
+		height: 160px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-top:160px;
+	}
+	
+	#aboutpic {
+		margin-top: 15px;
+		width: 100%;
+		margin-right: 30px;
+	}
+	
+	#abouttext {
+		margin-top: -100px;
+		font-size: 2.5vw;
+		width: 100%;
+	}
+	
+	.staffbox {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	
+	#staff {
+		font-size: 6vw;
+		margin-top: 50px;
+	}
+	
+	#stafftext {
+		margin-top: -40px;
+		width: 100%;
+		font-size: 2.5vw;
+		margin-right: -30px;
+	}
+	
+	#staffpic {
+		margin-top: 15px;
+		width: 90%;
+		margin-left: 30px;
+	}
+	
+	.contactbox {
+		margin-top: 10px;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	
+	#contact {
+		font-size: 5.5vw;
+		margin-left: 130px;
+		margin-top: 30px;
+	}
+	
+	.contactinfo {
+		font-size: 2.5vw;
+		width: 100%;
+		margin-left: 30px;
+		margin-top: -30px;
+		margin-bottom: 30px;
+	}
+}
+
+/*media query for 21 in monitor*/
+@media only screen and (min-width: 1800px) {
+	#homePic {
+		height: 130%;
+	}
+	
+	#welcome {
+		bottom: 190px;
+	}
+	
+	#statement {
+		bottom: 60px;
+	}
+	
+	#services {
+		margin-top: 200px;
+	}
+	
+	.slideshow-container {
+		height: 650px;
+	}
+	
+	.slidesbox1 {
+		bottom: -20px;
+	}
+	
+	.slidesbox2 {
+		bottom: 300px;
+	}
+	
+	.slidesbox3 {
+		bottom: 45px;
+	}
+	
+	#boating {
+		right: 548px;
+	}
+	
+	#historical {
+		right: 505px;
+	}
+	
+	#food {
+		right: 268px;
+	}
+	
+	#aboutpic {
+		height: 105%;
+	}
+	
+	#staff {
+		margin-top: 120px;
+	}
+	
+	.staffbox {
+		margin-top: 20px;
+		margin-bottom: 50px;
+	}
+	
+	#contact {
+		margin-top: 50px;
+		margin-right: 100px;
+	}
+	
+	#contactstatement {
+		width: 80%;
+	}
+}
+
+@media only screen and (min-width: 3200px) {
+	#home {
+		width: 10vw;
+	}
+	
+	.topnav {
+		margin-top: 1%;
+	}
+	
+	.topnav > a {
+		font-size: 2vw;
+	}
+	
+	.homebox {
+		height: 65vh;
+	}
+	
+	#welcome {
+		top: 78%;
+	}
+	
+	#statement {
+		width: 50%;
+		top: 85%;
+	}
+	
+	#myBtn {
+  		padding: 25px; 
+  		border-radius: 25px; 
+}
+	
+	#services {
+		margin-top: 15%;
+		margin-left: 30px;
+	}
+	
+	.slideshow-container {
+		height: 65vh;
+		margin-top:6%;
+	}
+	
+	.slideshowpic {
+		margin-top: 3.5%;
+		border-radius: 35px;
+	}
+	
+	.slidesbox1 {
+		bottom: -9vh;
+		padding: 35px;
+		border-radius: 35px;
+	}
+	
+	.slidesbox2 {
+		bottom: 510px;
+		padding: 35px;
+		border-radius: 35px;
+	}
+	
+	.slidesbox3 {
+		bottom: 125px;
+		padding: 35px;
+		border-radius: 35px;
+	}
+	
+	#boating {
+		top: 8%;
+		right: 26.5%;
+		font-size: 3.5vw;
+	}
+	
+	#historical {
+		top: 8%;
+		right: 23.6%;
+		font-size: 3.5vw;
+	}
+	
+	#food {
+		top: 8%;
+		right: 9%;
+		font-size: 3.5vw;
+	}
+	
+	#about {
+		margin-top: 4%;
+		margin-right: 30px;
+	}
+	
+	.aboutbox {
+		margin-top: 13%;
+		margin-right: 30px;
+		margin-left: 30px;
+
+	}
+	
+	#aboutpic {
+		height: 65vh;
+	}
+	
+	#staff {
+		margin-top: 20%;
+		margin-left: 30px;
+	}
+	
+	.staffbox {
+		margin-left: 30px;
+	}
+	
+	#contact {
+		margin-left: 30px;
+	}
+}
